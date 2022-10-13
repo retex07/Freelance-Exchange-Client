@@ -1,0 +1,54 @@
+@import "~@csstools/normalize.css";
+
+body {
+  overflow-y: scroll;
+
+  margin: 0;
+
+  background-color: #f9f9f9;
+
+  font-family: "Rubik", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Rubik", sans-serif;
+}
+
+button {
+  cursor: pointer;
+
+  font-style: normal;
+
+&:disabled {
+   cursor: not-allowed;
+ }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+
+  font-style: normal;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+#root {
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 100vh;
+}
