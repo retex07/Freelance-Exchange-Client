@@ -1,1 +1,1 @@
-export { default } from "./component";
+export { IndexPage } from "./component";

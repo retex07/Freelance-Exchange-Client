@@ -1,6 +1,10 @@
-
+import { Header } from '../Header'
 import "./styles.scss";
 
-export default function IndexPage() {
-    return <div className="main">Главная страница</div>
+export function IndexPage() {
+    return (
+        <div className="main">
+            Главная страница
+        </div>
+    )
 }
