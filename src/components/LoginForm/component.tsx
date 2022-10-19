@@ -1,6 +1,6 @@
 import React from 'react';
-import axios from 'axios';
-import './formcomponent.scss';
+import axios, { AxiosError, AxiosResponse } from 'axios';
+import './styles.scss';
 import { Link } from 'react-router-dom';
 
 interface IFormComponentProps{
@@ -11,7 +11,7 @@ interface IFormComponentProps{
   inputs: Array<React.ReactNode>,
 }
 
-export function FormComponent( {action ,header, button, formId, inputs}: IFormComponentProps) {
+export default function FormComponent( {action ,header, button, formId, inputs}: IFormComponentProps) {
 
   const [formInvalid, setFormInvalid] = React.useState(false);
 
@@ -42,7 +42,7 @@ export function FormComponent( {action ,header, button, formId, inputs}: IFormCo
       localStorage.setItem('token', res.data.accessToken);
       todayLink.click();
     }).catch(function (err) {
-
+      
       setTimeout(() => {
         for (let i = 0; i < inputList.length; i++) {
           inputList[i].setCustomValidity('');

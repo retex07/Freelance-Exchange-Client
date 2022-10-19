@@ -1,0 +1,44 @@
+@import"../../styles/variables.scss";
+
+
+.button{
+    color: $color__white;
+
+    border: none;
+    border-radius: $border__radius__button;
+}
+
+.button-blue{
+    background: linear-gradient(0deg, #145AA3 0%, rgba(20, 90, 163, 0.3) 100%);
+}
+.button-green{
+    background: linear-gradient(180deg, rgba(11, 201, 42, 0.44) 0%, #0BC92A 100%);
+}
+.button-grey{
+    background: linear-gradient(180deg, rgba(160, 160, 160, 0.53) 0%, #A0A0A0 100%);
+}
+
+.button-small{
+    padding: 15px 29px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+.button-middle{
+    padding: 20px 34px;
+
+    font-size: 25px;
+    font-weight: 600;
+}
+.button-big{
+    padding: 46px 54px;
+
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.button:disabled{
+    color: rgba(255, 255, 255, .5);
+
+    background: #A0A0A0;
+}

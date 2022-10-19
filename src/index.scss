@@ -1,11 +1,14 @@
 @import "~@csstools/normalize.css";
+*{
+  box-sizing: border-box;
+}
 
 body {
   overflow-y: scroll;
 
   margin: 0;
 
-  background-color: #f9f9f9;
+  background-color: #fff;
 
   font-family: "Rubik", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -28,6 +31,13 @@ button {
  }
 }
 
+ul{
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
 h1,
 h2,
 h3,
@@ -45,10 +55,20 @@ input::-ms-clear {
   display: none;
 }
 
+a{
+  text-decoration: none;
+}
+
 #root {
   display: flex;
 
   flex-direction: column;
 
   min-height: 100vh;
+}
+
+.container {
+  max-width: 1160px;
+  margin-right: auto;
+  margin-left: auto;
 }

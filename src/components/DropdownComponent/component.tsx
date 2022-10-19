@@ -1,27 +1,27 @@
 import React from 'react';
-import './dropdowncomponent.scss';
+import './styles.scss';
 
 interface IDropdownProps{
-  text: string;
+  visible: string | React.ReactNode,
   tabindex?: number,
-  choose: Array<string> | Array<React.ReactNode>,
+  drop: Array<string> | Array<React.ReactNode>,
 }
 
-export function DropdownComponent({text, tabindex, choose}: IDropdownProps) {
+export default function DropdownComponent({visible, tabindex, drop}: IDropdownProps) {
   const [open, setOpen] = React.useState(false);
-  const dropdownOpen = () => {
+  function dropdownOpen() {
     setOpen(!open);
   }
 
   return (
     <div className="dropdown" >
       <p className='dropdown-description' onClick={dropdownOpen} tabIndex={tabindex}>
-        {text}
+        {visible}
       </p>
       { open &&
       <ul className='dropdown-list'>
         {
-          choose.map((el) => {
+          drop.map((el) => {
             return <li className='dropdown-item'>{el}</li>;
           })
         }

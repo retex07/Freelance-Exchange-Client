@@ -1,10 +1,17 @@
-import { Header } from '../Header'
 import "./styles.scss";
 
-export function IndexPage() {
+import { useTranslation } from 'react-i18next';
+import Header from "../../blocks/Header";
+
+export default function IndexPage () {
+    const { t } = useTranslation("p_index");
+
     return (
-        <div className="main">
-            Главная страница
-        </div>
+        <>
+            <Header/>
+            <div className="main">
+                {t("title")}
+            </div>
+        </>
     )
 }
