@@ -1,4 +1,6 @@
 @import "~@csstools/normalize.css";
+@import "./styles/fonts.scss";
+
 *{
   box-sizing: border-box;
 }
@@ -8,9 +10,9 @@ body {
 
   margin: 0;
 
-  background-color: #fff;
+  background-color: #F0F0F0;
 
-  font-family: "Rubik", sans-serif;
+  font-family: "Montserrat", "Rubik", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,7 +20,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Rubik", sans-serif;
+  font-family: "Montserrat", "Rubik", sans-serif;
 }
 
 button {

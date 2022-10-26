@@ -3,19 +3,46 @@
 
 .button{
     color: $color__white;
+    font-weight: 600;
 
     border: none;
-    border-radius: $border__radius__button;
+
+    transition: all 0.3s ease-in-out;
 }
 
 .button-blue{
-    background: linear-gradient(0deg, #145AA3 0%, rgba(20, 90, 163, 0.3) 100%);
+    background-color: $tusur__color;
+
+    border-color: $tusur__color;
+
+    &:hover{
+        color: $tusur__color;
+
+        background-color: transparent;
+    }
 }
 .button-green{
-    background: linear-gradient(180deg, rgba(11, 201, 42, 0.44) 0%, #0BC92A 100%);
+    background-color: $green__color;
+
+    border-color: $green__color;
+
+    &:hover{
+        color: $green__color;
+
+        background-color: transparent;
+    }
 }
-.button-grey{
-    background: linear-gradient(180deg, rgba(160, 160, 160, 0.53) 0%, #A0A0A0 100%);
+.button-white{
+    color: $tusur__color;
+
+    border-color: $color__white;
+    background-color: $color__white;
+
+    &:hover{
+        color: $color__white;
+
+        background-color: transparent;
+    }
 }
 
 .button-small{
@@ -23,22 +50,35 @@
 
     font-size: 16px;
     font-weight: 600;
+
+    border-radius: 15px;
+    border-width: 2px;
+    border-style: solid;
 }
 .button-middle{
     padding: 20px 34px;
 
     font-size: 25px;
     font-weight: 600;
+
+    border-radius: 30px;
+    border-width: 3px;
+    border-style: solid;
 }
 .button-big{
     padding: 46px 54px;
 
     font-size: 30px;
     font-weight: 600;
+
+    border-radius: 40px;
+    border-width: 4px;
+    border-style: solid;
 }
 
 .button:disabled{
-    color: rgba(255, 255, 255, .5);
+    color: rgba($color__white, .5);
 
+    border: none;
     background: #A0A0A0;
 }

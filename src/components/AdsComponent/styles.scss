@@ -1,0 +1,44 @@
+@import "../../styles/variables.scss";
+
+.announ-component{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 28px 113px 33px 33px;
+
+    color: $text__color;
+    font-size: $text__size;
+
+    background-color: $color__white;
+    border-radius: 15px;
+    box-shadow: 3px 5px 5px 3px rgba(0, 0, 0, 0.13);
+}
+.announ-info{
+    display: flex;
+}
+.announ-img-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-right: 40px;
+}
+.announ-img{
+    margin-bottom: 6px;
+}
+.announ-text-block{
+    padding-top: 8px;
+}
+.announ-theme-header{
+    margin-bottom: 17px;
+}
+.announ-description{
+    height: 75px;
+    background: linear-gradient(180deg, #4A4A4A 35%, rgba(74, 74, 74, 0.12) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    overflow: hidden;
+}
