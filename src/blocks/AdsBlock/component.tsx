@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import AdsComponent from '../../components/AdsComponent';
-import ArrowIcon from '../../icons/ArrowIcon';
+import ArrowIcon from '../../static/icons/ArrowIcon';
 import './styles.scss';
 
 export default function AdsBlock() {

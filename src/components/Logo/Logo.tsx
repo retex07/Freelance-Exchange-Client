@@ -3,6 +3,6 @@ import './styles.scss';
 
 export default function Logo() {
   return (
-    <img src={require("../../img/logo.png")} alt="Logo" />
+    <img src={require("../../static/img/logo.png")} alt="Logo" />
   );
 }

@@ -17,7 +17,7 @@ export default function AdsComponent({name, theme, description}: IAdsComponentPr
     <div className="announ-component">
       <div className="announ-info">
         <div className="announ-img-block">
-          <img className='announ-img' src={require("../../img/anon_ava.png")} alt="avatar" />
+          <img className='announ-img' src={require("../../static/img/anon_ava.png")} alt="avatar" />
           {name}
         </div>
         <div className="announ-text-block">

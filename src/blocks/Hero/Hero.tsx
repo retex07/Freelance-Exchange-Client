@@ -32,7 +32,7 @@ export default function Hero() {
             <Button disabled={false} text={t('hero_button')} size='big' color='white' />
          </div>
 
-          <img className='hero' src={require("../../img/hero_image.png")} alt="" />
+          <img className='hero' src={require("../../static/img/hero_image.png")} alt="" />
       </div>
     </section>
   );
