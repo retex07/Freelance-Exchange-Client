@@ -1,13 +1,18 @@
 @import "~@csstools/normalize.css";
+@import "./styles/fonts.scss";
+
+*{
+  box-sizing: border-box;
+}
 
 body {
   overflow-y: scroll;
 
   margin: 0;
 
-  background-color: #f9f9f9;
+  background-color: #F0F0F0;
 
-  font-family: "Rubik", sans-serif;
+  font-family: "Montserrat", "Rubik", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,7 +20,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Rubik", sans-serif;
+  font-family: "Montserrat", "Rubik", sans-serif;
 }
 
 button {
@@ -26,6 +31,13 @@ button {
 &:disabled {
    cursor: not-allowed;
  }
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 h1,
@@ -45,10 +57,20 @@ input::-ms-clear {
   display: none;
 }
 
+a{
+  text-decoration: none;
+}
+
 #root {
   display: flex;
 
   flex-direction: column;
 
   min-height: 100vh;
+}
+
+.container {
+  max-width: 1160px;
+  margin-right: auto;
+  margin-left: auto;
 }

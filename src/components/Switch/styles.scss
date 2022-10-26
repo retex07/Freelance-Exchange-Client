@@ -1,0 +1,37 @@
+@import "../../styles/variables.scss";
+
+.switch{
+    position: relative;
+    
+    width: 64px;
+    height: 38px;
+    margin: 0 12px;
+
+
+    border: 2px solid $text__color;
+    border-radius: 30px;
+}
+
+.switch-checkbox{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.slider{
+    position: absolute;
+    top: 3px;
+    left: 4px;
+
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+    background-color: #0BC92A;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.switch-checkbox:checked + .slider{
+    transform: translateX(24px);
+}

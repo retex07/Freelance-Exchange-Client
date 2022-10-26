@@ -1,0 +1,37 @@
+@import"../../styles/variables.scss";
+
+.header{
+    font-size: $text__size;
+    color: $text__color;
+    
+    background-color: $bg__color;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 130px;
+}
+
+.header-nav{
+    flex-grow: 1;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-nav-link{
+    font-weight: 400;
+    color: $text__color;
+
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.language-switch{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

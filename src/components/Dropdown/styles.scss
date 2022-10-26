@@ -1,0 +1,43 @@
+@import"../../styles/variables.scss";
+
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-description{
+    cursor: pointer;
+}
+
+.dropdown-list{
+    position: absolute;
+    top: calc(100% + 10px);
+
+    display: flex;
+    flex-direction: column;
+
+    // padding: 10px 0px;
+
+    background-color: $color__white;
+    border-radius: 10px;
+
+    box-shadow: 3px 5px 5px 3px rgba(0, 0, 0, 0.13);
+}
+.dropdown-item{
+    padding: 10px;
+
+    white-space: nowrap;
+    
+    & a{
+        display: block;
+        color: $text__color;
+        width: 100%;
+        
+        &:hover{
+            color: $tusur__color;
+        }
+    }
+}
+.dropdown-item:not(:last-child){
+    border-bottom: 1px solid #B6B6B6;
+}

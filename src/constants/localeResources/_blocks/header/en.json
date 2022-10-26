@@ -1,0 +1,10 @@
+{
+    "main_link": "MAIN",
+    "ads_link": "ADS",
+
+    "enter_button": "Enter",
+    
+    "dropdown_profile": "Profile",
+    "dropdown_ads": "My Ads",
+    "dropdown_exit": "Exit"
+}
