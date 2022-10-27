@@ -11,29 +11,29 @@
 }
 
 .button-blue{
-    background-color: $tusur__color;
+    background-color: $color__tusur;
 
-    border-color: $tusur__color;
+    border-color: $color__tusur;
 
     &:hover{
-        color: $tusur__color;
+        color: $color__tusur;
 
         background-color: transparent;
     }
 }
 .button-green{
-    background-color: $green__color;
+    background-color: $color__green;
 
-    border-color: $green__color;
+    border-color: $color__green;
 
     &:hover{
-        color: $green__color;
+        color: $color__green;
 
         background-color: transparent;
     }
 }
 .button-white{
-    color: $tusur__color;
+    color: $color__tusur;
 
     border-color: $color__white;
     background-color: $color__white;
