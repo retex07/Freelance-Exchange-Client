@@ -8,8 +8,8 @@
     margin-bottom: 40px;
     padding: 28px 113px 33px 33px;
 
-    color: $text__color;
-    font-size: $text__size;
+    color: $color__text;
+    font-size: 23px;
 
     background-color: $color__white;
     border-radius: 15px;
@@ -39,6 +39,6 @@
     background: linear-gradient(180deg, #4A4A4A 35%, rgba(74, 74, 74, 0.12) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
+   // background-clip: text;
     overflow: hidden;
 }

@@ -1,16 +1,16 @@
-import React, { useTransition } from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import DropdownComponent from '../../components/Dropdown';
 import Logo from '../../components/Logo';
 import Switch from '../../components/Switch';
 import { useTranslation } from "react-i18next";
+import Button from '../../components/Button';
+import Modal from "../../components/Modal";
+
 import './styles.scss';
-import ButtonComponent from '../../components/Button';
-import AdsComponent from '../../components/AdsComponent';
 
 export default function Header() {
-
   const { t } = useTranslation("b_header");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <header className='header'>
@@ -35,7 +35,16 @@ export default function Header() {
           RU
         </div>
 
-        <ButtonComponent text={t("enter_button")} disabled={false} color="blue" size="small"/>
+        <Button
+            onClick={() => setIsModalOpen(!isModalOpen)}
+            text={t("enter_button")}
+            disabled={false}
+            color="blue"
+            size="small"
+        />
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          Something text
+        </Modal>
       </div>
     </header>
   );

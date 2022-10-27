@@ -1,10 +1,10 @@
 @import"../../styles/variables.scss";
 
 .header{
-    font-size: $text__size;
-    color: $text__color;
+    font-size: 23px;
+    color: $color__text;
     
-    background-color: $bg__color;
+    background-color: $color__bg;
 }
 .header-container{
     display: flex;
@@ -24,7 +24,7 @@
 
 .header-nav-link{
     font-weight: 400;
-    color: $text__color;
+    color: $color__text;
 
     border-bottom: 1px solid #cfcfcf;
 }
