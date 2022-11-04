@@ -2,6 +2,8 @@
 
 
 .button{
+    min-width: 126px;
+
     color: $color__white;
     font-weight: 600;
 
@@ -40,6 +42,18 @@
 
     &:hover{
         color: $color__white;
+
+        background-color: transparent;
+    }
+}
+.button-clear{
+    color: $color__text;
+
+    border-color: $color__tusur;
+    background-color: transparent;
+
+    &:hover{
+        color: $color__tusur;
 
         background-color: transparent;
     }

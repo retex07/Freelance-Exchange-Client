@@ -8,9 +8,9 @@ function App() {
   return (
       <Suspense fallback={<>Loading...</>}>
           <Switch>
-              <Route path="/" exact render={() => <IndexPage />}/>
+              <Route path="/" render={() => <ProfilePage />}/>
+              <Route path="/index" exact render={() => <IndexPage />}/>
               <Route path="/ads" render={() => <AdsPage />}/>
-              <Route path="/profile" render={() => <ProfilePage />}/>
           </Switch>
       </Suspense>
   );

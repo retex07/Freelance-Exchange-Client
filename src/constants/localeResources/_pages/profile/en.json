@@ -1,3 +1,15 @@
 {
-  "title": "Profile"
+  "profile_header": "Your profile",
+  "profile_ava_button": "Edit photo",
+
+  "profile_form_name": "Name",
+  "profile_form_surname": "Last name",
+  "profile_form_patronymic": "Patronymic",
+  "profile_form_birth": "Birthdate",
+  "profile_form_institution": "Where I study",
+  "profile_form_skills": "Skills",
+
+  "profile_error_message": "This field is required",
+
+  "profile_save_button": "Save"
 }

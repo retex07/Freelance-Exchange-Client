@@ -14,7 +14,7 @@
 }
 
 .header-nav{
-    flex-grow: 1;
+    width: 40%;
 }
 
 .nav-list{
@@ -30,7 +30,8 @@
 }
 
 .language-switch{
-    flex-grow: 1;
+    width: 30%;
+    min-width: 157px;
     display: flex;
     justify-content: center;
     align-items: center;

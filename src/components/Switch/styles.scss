@@ -17,6 +17,10 @@
     width: 0;
     height: 0;
     opacity: 0;
+
+    &:checked + .slider{
+        transform: translateX(24px);
+    }
 }
 
 .slider{
@@ -31,8 +35,4 @@
     background-color: #0BC92A;
 
     transition: all 0.3s ease-in-out;
-}
-
-.switch-checkbox:checked + .slider{
-    transform: translateX(24px);
 }
