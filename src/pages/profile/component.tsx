@@ -1,11 +1,10 @@
-import "./styles.scss";
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { useTranslation } from "react-i18next";
+import './styles.scss';
 
 export default function ProfilePage() {
-    const { t } = useTranslation("p_profile");
+  const { t } = useTranslation('p_profile');
 
-    return (
-        <div>{t("title")}</div>
-    )
+  return <div>{t('title')}</div>;
 }
