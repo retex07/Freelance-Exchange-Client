@@ -1,19 +1,19 @@
 import React from 'react';
 import './styles.scss';
 
-interface IButtonProps{
-  text: string,
-  color: "blue" | "green" | "white",
-  size: "small" | "middle" | "big",
-  disabled: boolean,
-  onClick?: () => void,
+interface IButtonProps {
+  text: string;
+  color: 'blue' | 'green' | 'white';
+  size: 'small' | 'middle' | 'big';
+  disabled: boolean;
+  onClick?: () => void;
 }
 
-export default function Button({text, color, size, disabled, onClick}: IButtonProps) {
+export default function Button({ text, color, size, disabled, onClick }: IButtonProps) {
   return (
     <>
       <button disabled={disabled} className={`button button-${color} button-${size}`} onClick={onClick}>
-          {text}
+        {text}
       </button>
     </>
   );
