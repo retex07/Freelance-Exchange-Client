@@ -1,11 +1,10 @@
-import "./styles.scss";
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { useTranslation } from "react-i18next";
+import './styles.scss';
 
 export default function AdsPage() {
-    const { t } = useTranslation("p_ads");
+  const { t } = useTranslation('p_ads');
 
-    return (
-        <div>{t("title")}</div>
-    )
+  return <div>{t('title')}</div>;
 }

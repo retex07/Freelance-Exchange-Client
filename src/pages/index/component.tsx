@@ -1,20 +1,18 @@
-import "./styles.scss";
+import React from 'react';
 
-import { useTranslation } from 'react-i18next';
-import Header from "../../blocks/Header";
-import Hero from "../../blocks/Hero";
-import AdsBlock from "../../blocks/AdsBlock";
+import AdsBlock from '../../blocks/AdsBlock';
+import Header from '../../blocks/Header';
+import Hero from '../../blocks/Hero';
+import './styles.scss';
 
-export default function IndexPage () {
-    const { t } = useTranslation("p_index");
-
-    return (
-        <>
-            <Header/>
-            <main className="main">
-                <Hero/>
-                <AdsBlock/>
-            </main>
-        </>
-    )
+export default function IndexPage() {
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <AdsBlock />
+      </main>
+    </>
+  );
 }
