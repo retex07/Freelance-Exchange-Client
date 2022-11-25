@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../../components/Logo';
+
+import Button from '../../components/Button';
+import Modal from '../../components/Modal';
 import Switch from '../../components/Switch';
 import { useTranslation } from "react-i18next";
-import Button from '../../components/Button';
 
 import './styles.scss';
 import Dropdown from '../../components/Dropdown';
@@ -12,12 +13,11 @@ export default function Header() {
   const { t } = useTranslation("b_header");
 
   return (
-    <header className='header'>
+    <header className="header">
       <div className="container header-container">
-        <Logo/>
-
-        <nav className='header-nav'>
-          <ul className='nav-list'>
+        <img src={require('../../static/img/logo.png')} alt="Logo" />
+        <nav className="header-nav">
+          <ul className="nav-list">
             <li className="nav-item">
               <Link to={'/'} className='header-nav-link'>{t("mainLink")}</Link>
             </li>
@@ -30,7 +30,7 @@ export default function Header() {
 
         <div className="language-switch">
           EN
-          <Switch/>
+          <Switch />
           RU
         </div>
 

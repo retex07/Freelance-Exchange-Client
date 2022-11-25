@@ -1,6 +1,5 @@
-import "./styles.scss";
-
 import React from "react";
+import "./styles.scss";
 import { useTranslation } from "react-i18next";
 import Header from "../../blocks/Header";
 import AdsComponent from "../../components/AdsComponent";
@@ -9,7 +8,7 @@ import Modal from "../../components/Modal";
 import CreateAdsForm from "../../components/CreateAdsForm";
 
 export default function AdsPage() {
-    const { t } = useTranslation("p_ads");
+  const { t } = useTranslation('p_ads');
 
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 

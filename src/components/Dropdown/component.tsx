@@ -21,8 +21,8 @@ export default function DropdownComponent({visible, tabindex, drop}: IDropdownPr
       { open &&
       <ul className='dropdown-list'>
         {
-          drop.map((el) => {
-            return <li className='dropdown-item'>{el}</li>;
+          drop.map((el, index) => {
+            return <li className='dropdown-item' key={`dropdown_${index}`}>{el}</li>;
           })
         }
       </ul>

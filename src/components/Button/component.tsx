@@ -9,11 +9,11 @@ interface IButtonProps{
   onClick?: () => void,
 }
 
-export default function Button({text, color, size, disabled, onClick}: IButtonProps) {
+export default function Button({ text, color, size, disabled, onClick }: IButtonProps) {
   return (
     <>
       <button disabled={disabled} className={`button button-${color} button-${size}`} onClick={onClick}>
-          {text}
+        {text}
       </button>
     </>
   );

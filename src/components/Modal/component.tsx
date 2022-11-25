@@ -1,28 +1,28 @@
-import React, {useEffect, useMemo} from "react";
-import {createPortal} from "react-dom";
+import React, { useEffect, useMemo } from 'react';
+import { createPortal } from 'react-dom';
 
-import "./styles.scss";
+import './styles.scss';
 
-const modalRootElement = document.getElementById("modal");
+const modalRootElement = document.getElementById('modal');
 
 interface Props {
-    children?: React.ReactNode;
-    onClose?: () => void;
-    isOpen: boolean;
+  children?: React.ReactNode;
+  onClose?: () => void;
+  isOpen: boolean;
 }
 
 const Modal = (props: Props) => {
-    const element = useMemo(() => document.createElement("div"), [])
+  const element = useMemo(() => document.createElement('div'), []);
 
-    useEffect(() => {
-        if (props.isOpen) {
-            modalRootElement?.appendChild(element);
+  useEffect(() => {
+    if (props.isOpen) {
+      modalRootElement?.appendChild(element);
 
-            return () => {
-                modalRootElement?.removeChild(element);
-            };
-        }
-    });
+      return () => {
+        modalRootElement?.removeChild(element);
+      };
+    }
+  });
 
     return props.isOpen ?
         createPortal(
