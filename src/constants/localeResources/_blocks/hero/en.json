@@ -1,8 +1,8 @@
 {
-    "hero_header": "FREELAND EXCHANGE FOR STUDENTS",
+    "header": "FREELAND EXCHANGE FOR STUDENTS",
 
-    "hero_description_1": "This project is about creating a service to help each other",
-    "hero_description_2": "Find yourself a personal tutor in 5 minutes",
+    "description_1": "This project is about creating a service to help each other",
+    "description_2": "Find yourself a personal tutor in 5 minutes",
 
-    "hero_button": "POST QUESTION"
+    "button": "POST QUESTION"
 }

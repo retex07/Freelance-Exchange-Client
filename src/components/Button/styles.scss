@@ -2,7 +2,7 @@
 
 
 .button{
-    min-width: 126px;
+    min-width: 82px;
 
     color: $color__white;
     font-weight: 600;
@@ -60,32 +60,32 @@
 }
 
 .button-small{
-    padding: 15px 29px;
+    padding: 10px 18px;
 
-    font-size: 16px;
+    font-size: 10px;
     font-weight: 600;
 
-    border-radius: 15px;
+    border-radius: 10px;
     border-width: 2px;
     border-style: solid;
 }
 .button-middle{
-    padding: 20px 34px;
+    padding: 15px 25px;
 
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 600;
 
-    border-radius: 30px;
-    border-width: 3px;
+    border-radius: 22px;
+    border-width: 2px;
     border-style: solid;
 }
 .button-big{
-    padding: 46px 54px;
+    padding: 30px 35px;
 
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
 
-    border-radius: 40px;
+    border-radius: 34px;
     border-width: 4px;
     border-style: solid;
 }

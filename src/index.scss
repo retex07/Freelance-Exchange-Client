@@ -24,6 +24,17 @@ select {
   font-family: "Montserrat", "Rubik", sans-serif;
 }
 
+textarea{
+  resize: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 button {
   cursor: pointer;
 
@@ -72,6 +83,7 @@ a{
 
 .container {
   max-width: 1160px;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
 }

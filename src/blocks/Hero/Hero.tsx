@@ -12,11 +12,11 @@ export default function Hero() {
       <div className="container hero-container">
          <div className='text-block'>
             <h1 className='hero-header'>
-              {t('hero_header')}
+              {t('header')}
             </h1>
 
             <p className='hero-description'>
-              {t('hero_description_1')}
+              {t('description_1')}
             </p>
 
             <p className='hero-description'>
@@ -25,11 +25,11 @@ export default function Hero() {
               </span> 
 
               <span>
-                {t('hero_description_2')}
+                {t('description_2')}
               </span> 
             </p>
 
-            <Button disabled={false} text={t('hero_button')} size='big' color='white' />
+            <Button disabled={false} text={t('button')} size='big' color='white' />
          </div>
 
           <img className='hero' src={require("../../static/img/hero_image.png")} alt="" />

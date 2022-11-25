@@ -1,8 +1,9 @@
 import "./styles.scss";
 
+import { Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Header from "../../blocks/Header";
-import Profile from "../../blocks/Profile";
+import ProfileEdit from "../../blocks/ProfileEdit";
 
 export default function ProfilePage() {
     const { t } = useTranslation("p_profile");
@@ -10,7 +11,8 @@ export default function ProfilePage() {
     return (
         <>
             <Header/>
-            <Profile/>
+            
+            <Outlet/>
         </>
     )
 }

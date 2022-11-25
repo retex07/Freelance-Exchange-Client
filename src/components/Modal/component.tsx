@@ -26,9 +26,12 @@ const Modal = (props: Props) => {
 
     return props.isOpen ?
         createPortal(
-            <div className="modal-container" onClick={props.onClose}>
-                <div className="modal-card">{props.children}</div>
-            </div>,
+            <>
+                <div className="bg-closer" onClick={props.onClose}></div>
+                <div className="modal-container" >
+                    <div className="modal-card">{props.children}</div>
+                </div>
+            </>,
             element)
         :
         null;

@@ -1,15 +1,25 @@
 {
-  "profile_header": "Ваш профиль",
-  "profile_ava_button": "Изменить фото",
-
-  "profile_form_name": "Имя",
-  "profile_form_surname": "Фамилия",
-  "profile_form_patronymic": "Отчество",
-  "profile_form_birth": "Дата рождения",
-  "profile_form_institution": "Где обучаюсь",
-  "profile_form_skills": "Навыки",
-
-  "profile_error_message": "Обязательно для заполнения",
+  "page":{
+    "skills":"Навыки",
+    "about":"Обо мне",
+    "editButton":"Редактировать"
+  },
+  "edit":{
+    "header": "Редактор профиля",
+    "avaButton": "Изменить фото",
   
-  "profile_save_button": "Сохранить"
+    "form":{
+      "name": "Имя",
+      "surname": "Фамилия",
+      "patronymic": "Отчество",
+      "birth": "Дата рождения",
+      "institution": "Где обучаюсь",
+      "skills": "Навыки",
+      "about":"Обо мне",
+    
+      "errorMessage": "Обязательно для заполнения",
+      
+      "saveButton": "Сохранить"
+    }
+  }
 }
