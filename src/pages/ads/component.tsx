@@ -3,10 +3,10 @@ import './styles.scss';
 import { useTranslation } from 'react-i18next';
 
 import Header from '../../blocks/Header';
-import AdsComponent from '../../components/AdsComponent';
 import Button from '../../components/Button';
-import CreateAdsForm from '../../components/CreateAdsForm';
 import Modal from '../../components/Modal';
+import AdsComponent from './components/AdsComponent';
+import CreateAdsForm from './components/CreateAdsForm';
 
 export default function AdsPage() {
   const { t } = useTranslation('p_ads');

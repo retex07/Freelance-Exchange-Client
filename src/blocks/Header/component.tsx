@@ -1,22 +1,23 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Dropdown from '../../components/Dropdown';
-import Switch from '../../components/Switch';
+import SwitchLanguage from '../../components/SwitchLanguage';
 import './styles.scss';
 
 export default function Header() {
   const { t } = useTranslation('b_header');
+  const navigate = useNavigate();
 
   const linkList = [
-    <Link key={1} to="/profile/item">
+    <Link key={0} to="/profile/item">
       {t('dropdown.profile')}
     </Link>,
     <Link key={1} to="/myAds">
       {t('dropdown.ads')}
     </Link>,
-    <Link key={1} to="">
+    <Link key={2} to="">
       {t('dropdown.exit')}
     </Link>,
   ];
@@ -24,7 +25,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container header-container">
-        <img src={require('../../static/img/logo.png')} alt="Logo" />
+        <img src={require('../../static/img/logo.png')} alt="Logo" onClick={() => navigate('/')} className="logo" />
         <nav className="header-nav">
           <ul className="nav-list">
             <li className="nav-item">
@@ -32,7 +33,6 @@ export default function Header() {
                 {t('mainLink')}
               </Link>
             </li>
-
             <li className="nav-item">
               <Link to={'/ads'} className="header-nav-link">
                 {t('adsLink')}
@@ -42,9 +42,9 @@ export default function Header() {
         </nav>
 
         <div className="language-switch">
-          EN
-          <Switch />
-          RU
+          <label>EN</label>
+          <SwitchLanguage />
+          <label>RU</label>
         </div>
 
         <Dropdown

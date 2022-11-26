@@ -4,7 +4,7 @@ import { Calendar } from 'react-calendar';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import Button from '../../../components/Button';
+import Button from '../../../../../components/Button';
 import './styles.scss';
 
 type Inputs = {

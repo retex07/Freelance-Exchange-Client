@@ -2,8 +2,8 @@ import React from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import { RubleIcon } from '../../static/icons';
-import Button from '../Button';
+import Button from '../../../../components/Button';
+import RubleIcon from '../../../../static/icons/Ruble';
 import './styles.scss';
 
 type Inputs = {
@@ -14,14 +14,15 @@ type Inputs = {
 };
 
 export default function CreateAdsForm() {
+  const { t } = useTranslation('p_ads');
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
-  const { t } = useTranslation('p_ads');
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
   return (
     <form className="creare-ads-form" action="" onSubmit={handleSubmit(onSubmit)}>
@@ -29,21 +30,18 @@ export default function CreateAdsForm() {
 
       <div className="creare-ads-input-block">
         <label className="creare-ads-label">{t('adsCreate.category')}</label>
-
         <input className="creare-ads-text-input" id="category" {...register('category', { required: true })} />
         {errors.category && <p className="creare-ads-error-description">{t('adsCreate.error')}</p>}
       </div>
 
       <div className="creare-ads-input-block">
         <label className="creare-ads-label">{t('adsCreate.theme')}</label>
-
         <input className="creare-ads-text-input" id="theme" {...register('theme', { required: true })} />
         {errors.theme && <p className="creare-ads-error-description">{t('adsCreate.error')}</p>}
       </div>
 
       <div className="creare-ads-input-block">
         <label className="creare-ads-label">{t('adsCreate.description')}</label>
-
         <textarea
           className="creare-ads-text-input create-ads-textarea"
           id="description"
@@ -54,7 +52,6 @@ export default function CreateAdsForm() {
 
       <div className="creare-ads-input-block price-block">
         <label className="creare-ads-label">{t('adsCreate.price')}</label>
-
         <input
           type={'number'}
           className="creare-ads-text-input"
