@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import Button from '../../../components/Button';
+import Button from '../../../../../components/Button';
 import './styles.scss';
 
 export default function ProfileAvatar() {
@@ -11,7 +11,7 @@ export default function ProfileAvatar() {
     <div className="edit-avatar-block">
       <h1 className="edit-header">{t('edit.header')}</h1>
 
-      <img className="avatar" src={require('../../../static/img/profile_anon.png')} alt="profile-avatar" />
+      <img className="avatar" src={require('../../../../../static/img/profile_anon.png')} alt="profile-avatar" />
 
       <Button
         disabled={false}

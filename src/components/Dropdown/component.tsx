@@ -9,13 +9,10 @@ interface IDropdownProps {
 
 export default function DropdownComponent({ visible, tabindex, drop }: IDropdownProps) {
   const [open, setOpen] = React.useState(false);
-  function dropdownOpen() {
-    setOpen(!open);
-  }
 
   return (
     <div className="dropdown">
-      <p className="dropdown-description" onClick={dropdownOpen} tabIndex={tabindex}>
+      <p className="dropdown-description" onClick={() => setOpen(!open)} tabIndex={tabindex}>
         {visible}
       </p>
       {open && (

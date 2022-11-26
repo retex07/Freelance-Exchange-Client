@@ -2,11 +2,11 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-import Button from '../../components/Button';
-import List from '../../components/List';
+import Button from '../../../../components/Button';
+import List from '../../../../components/List';
 import './styles.scss';
 
-export default function Profile() {
+export default function ProfileItem() {
   const linkHandler = () => {
     const linkEl = document.getElementById('toEdit') as HTMLLinkElement;
     linkEl.click();
@@ -32,7 +32,7 @@ export default function Profile() {
         </div>
 
         <div className="info-avatar">
-          <img src={require('../../static/img/profile_anon.png')} alt="avatar" className="avatar" />
+          <img src={require('../../../../static/img/profile_anon.png')} alt="avatar" className="avatar" />
           <Button disabled={false} text={t('page.editButton')} color="blue" size="middle" onClick={linkHandler} />
         </div>
       </div>

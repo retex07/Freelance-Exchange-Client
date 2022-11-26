@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import Button from '../Button';
+import Button from '../../../../components/Button';
 import './styles.scss';
 
 interface IAdsComponentProps {
@@ -18,7 +18,7 @@ export default function AdsComponent({ name, theme, description, date }: IAdsCom
     <div className="announ-component">
       <div className="announ-info">
         <div className="announ-img-block">
-          <img className="announ-img" src={require('../../static/img/anon_ava.png')} alt="avatar" />
+          <img className="announ-img" src={require('../../../../static/img/anon_ava.png')} alt="avatar" />
           {name}
         </div>
         <div className="announ-text-block">
