@@ -1,10 +1,13 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { Outlet } from 'react-router-dom';
 
-import './styles.scss';
+import Header from '../../blocks/Header';
 
 export default function ProfilePage() {
-  const { t } = useTranslation('p_profile');
-
-  return <div>{t('title')}</div>;
+  return (
+    <>
+      <Header />
+      <Outlet />
+    </>
+  );
 }

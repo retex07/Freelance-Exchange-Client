@@ -1,10 +1,12 @@
 {
-    "main_link": "MAIN",
-    "ads_link": "ADS",
+    "mainLink": "MAIN",
+    "adsLink": "ADS",
 
-    "enter_button": "Enter",
+    "enterButton": "ENTER",
     
-    "dropdown_profile": "Profile",
-    "dropdown_ads": "My Ads",
-    "dropdown_exit": "Exit"
+    "dropdown":{
+        "profile": "Profile",
+        "ads": "My Ads",
+        "exit": "Exit"
+    }
 }

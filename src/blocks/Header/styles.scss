@@ -1,20 +1,20 @@
 @import"../../styles/variables.scss";
 
 .header{
-    font-size: 23px;
+    font-size: 16px;
     color: $color__text;
     
-    background-color: $color__bg;
+    background-color: $color__white;
 }
 .header-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 130px;
+    height: 60px;
 }
 
 .header-nav{
-    flex-grow: 1;
+    width: 40%;
 }
 
 .nav-list{
@@ -27,11 +27,20 @@
     color: $color__text;
 
     border-bottom: 1px solid #cfcfcf;
+    transition: all 0.3s ease-in-out;
 }
+.header-nav-link:hover{
+    color: $color__tusur;
 
+    border-bottom: 1px solid $color__tusur;
+}
 .language-switch{
-    flex-grow: 1;
+    min-width: 157px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.header-dropdown{
+    width: 47px;
+    height: 47px;
 }

@@ -1,15 +1,18 @@
 @import "../../styles/variables.scss";
 
 .announ-component{
+    position: relative;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    // width: 100%;
+    min-width: 860px;
     margin-bottom: 40px;
-    padding: 28px 113px 33px 33px;
+    padding: 20px 80px 25px 20px;
 
     color: $color__text;
-    font-size: 23px;
+    font-size: 17px;
 
     background-color: $color__white;
     border-radius: 15px;
@@ -26,6 +29,8 @@
     margin-right: 40px;
 }
 .announ-img{
+    height: 71px;
+    width: 71px;
     margin-bottom: 6px;
 }
 .announ-text-block{
@@ -35,10 +40,18 @@
     margin-bottom: 17px;
 }
 .announ-description{
-    height: 75px;
-    background: linear-gradient(180deg, #4A4A4A 35%, rgba(74, 74, 74, 0.12) 100%);
+    max-width: 425px;
+    height: 57px;
+    background: linear-gradient(180deg, $color__text 35%, rgba(74, 74, 74, 0.12) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-   // background-clip: text;
     overflow: hidden;
+}
+.announ-date{
+    position: absolute;
+    right: 18px;
+    bottom: 10px;
+
+    font-size: 15px;
+    color: #989898;
 }

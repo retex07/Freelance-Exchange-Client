@@ -1,1 +1,2 @@
-export { default } from "./ArrowIcon";
+export * from "./ArrowIcon";
+export * from "./RubleIcon";

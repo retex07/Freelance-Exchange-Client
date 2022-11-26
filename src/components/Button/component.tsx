@@ -3,7 +3,7 @@ import './styles.scss';
 
 interface IButtonProps {
   text: string;
-  color: 'blue' | 'green' | 'white';
+  color: 'blue' | 'green' | 'white' | 'clear';
   size: 'small' | 'middle' | 'big';
   disabled: boolean;
   onClick?: () => void;

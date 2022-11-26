@@ -8,10 +8,11 @@ interface IAdsComponentProps {
   name: string;
   theme: string;
   description: string;
+  date: string;
 }
 
-export default function AdsComponent({ name, theme, description }: IAdsComponentProps) {
-  const { t } = useTranslation('b_ads');
+export default function AdsComponent({ name, theme, description, date }: IAdsComponentProps) {
+  const { t } = useTranslation('p_ads');
 
   return (
     <div className="announ-component">
@@ -22,7 +23,7 @@ export default function AdsComponent({ name, theme, description }: IAdsComponent
         </div>
         <div className="announ-text-block">
           <h3 className="announ-theme-header">
-            {t('ads_theme')}: {theme}
+            {t('theme')}: {theme}
           </h3>
           <p className="announ-description">{description}</p>
         </div>
@@ -30,13 +31,15 @@ export default function AdsComponent({ name, theme, description }: IAdsComponent
 
       <Button
         disabled={false}
-        text={t('ads_button')}
+        text={t('buttonRespond')}
         color="green"
         size="middle"
         onClick={() => {
           console.log('ads-block CLICK');
         }}
       />
+
+      <div className="announ-date">{date}</div>
     </div>
   );
 }

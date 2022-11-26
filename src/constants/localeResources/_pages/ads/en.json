@@ -1,3 +1,18 @@
 {
-  "title": "Ads"
+  "header": "ADS",
+  "buttonCreate": "Create Ad",
+
+  "theme": "Theme",
+  "buttonRespond": "RESPOND",
+  "more": "See more",
+
+  "adsCreate": {
+      "header":"PARAMS",
+      "category": "Category",
+      "theme": "Ad Theme",
+      "description": "Ad Description",
+      "price": "Price",
+      "button":"Publish",
+      "error":"Required to fill"
+  }
 }

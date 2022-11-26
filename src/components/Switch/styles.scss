@@ -3,8 +3,8 @@
 .switch{
     position: relative;
     
-    width: 64px;
-    height: 38px;
+    width: 45px;
+    height: 27px;
     margin: 0 12px;
 
     cursor: pointer;
@@ -17,22 +17,22 @@
     width: 0;
     height: 0;
     opacity: 0;
+
+    &:checked + .slider{
+        transform: translateX(18px);
+    }
 }
 
 .slider{
     position: absolute;
-    top: 3px;
-    left: 4px;
+    top: 2px;
+    left: 2px;
 
-    width: 28px;
-    height: 28px;
+    width: 19px;
+    height: 19px;
 
     border-radius: 50%;
     background-color: #0BC92A;
 
     transition: all 0.3s ease-in-out;
-}
-
-.switch-checkbox:checked + .slider{
-    transform: translateX(24px);
 }

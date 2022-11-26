@@ -1,16 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-import Button from '../../components/Button';
-import Modal from '../../components/Modal';
+import Dropdown from '../../components/Dropdown';
 import Switch from '../../components/Switch';
-
 import './styles.scss';
 
 export default function Header() {
   const { t } = useTranslation('b_header');
-  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const linkList = [
+    <Link key={1} to="/profile/item">
+      {t('dropdown.profile')}
+    </Link>,
+    <Link key={1} to="/myAds">
+      {t('dropdown.ads')}
+    </Link>,
+    <Link key={1} to="">
+      {t('dropdown.exit')}
+    </Link>,
+  ];
 
   return (
     <header className="header">
@@ -20,13 +29,13 @@ export default function Header() {
           <ul className="nav-list">
             <li className="nav-item">
               <Link to={'/'} className="header-nav-link">
-                {t('main_link')}
+                {t('mainLink')}
               </Link>
             </li>
 
             <li className="nav-item">
               <Link to={'/ads'} className="header-nav-link">
-                {t('ads_link')}
+                {t('adsLink')}
               </Link>
             </li>
           </ul>
@@ -38,16 +47,10 @@ export default function Header() {
           RU
         </div>
 
-        <Button
-          onClick={() => setIsModalOpen(!isModalOpen)}
-          text={t('enter_button')}
-          disabled={false}
-          color="blue"
-          size="small"
+        <Dropdown
+          visible={<img className="header-dropdown" src={require('../../static/img/anon_ava.png')} alt="dropdown" />}
+          drop={linkList}
         />
-        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-          Something text
-        </Modal>
       </div>
     </header>
   );

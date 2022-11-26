@@ -1,3 +1,25 @@
 {
-  "title": "Profile"
+  "page":{
+    "skills":"Skills",
+    "about":"About Me",
+    "editButton":"Edit"
+  },
+  "edit":{
+    "header": "Profile editor",
+    "avaButton": "Edit photo",
+  
+    "form":{
+      "name": "Name",
+      "surname": "Last name",
+      "patronymic": "Patronymic",
+      "birth": "Birthdate",
+      "institution": "Where I study",
+      "skills": "Skills",
+      "about": "About Me",
+    
+      "errorMessage": "This field is required",
+    
+      "saveButton": "Save"
+    }
+  }
 }

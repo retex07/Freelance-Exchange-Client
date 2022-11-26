@@ -1,0 +1,88 @@
+@import "../../../styles/variables.scss";
+
+
+.edit-form{
+    width: 500px;
+}
+.edit-input-block{
+    position: relative;
+}
+.edit-label{
+    display: block;
+    margin-bottom: 7px;
+
+    font-size: 16px;
+    color: #929292;
+}
+.edit-text-input{
+    width: 100%;
+    padding: 13px 8px;
+    margin-bottom: 7px;
+
+    font-size: 20px;
+    color: #474747;
+
+    border: 1px solid #D7D4D4;
+    border-radius: 5px;
+    background: $color__white;
+
+    transition: all 0.3s ease-in-out;
+
+    &.textarea{
+        height: 200px;
+    }
+
+    &:hover{
+        border: 1px solid #1977DB;
+    }
+    &:focus{
+        outline: none;
+        border: 1px solid #1977DB;
+    }
+    &:invalid{
+        border: 1px solid #A02828;
+    }
+}
+#birthday{
+    cursor: pointer;
+}
+.edit-error-description{
+    position: absolute;
+    right: 0;
+    bottom: -17px;
+    margin-bottom: 7px;
+
+    font-size: 12px;
+    color: #b32e2e;
+}
+
+.date-block{
+    position: relative;
+}
+
+.react-calendar{
+    position: absolute;
+
+    width: 100%;
+
+    border-radius: 5px;
+    border: 1px solid #D7D4D4;
+    transition: border 0.3s ease-in-out;
+    z-index: 10;
+
+    &:hover{
+        border: 1px solid #1977DB;
+    }
+}
+.react-calendar__tile--active{
+    background: #1977DB;
+}
+.react-calendar__tile{
+    font-weight: 500;
+}
+.react-calendar__month-view__days__day--weekend{
+    color: #1977DB;
+}
+.react-calendar__month-view__days__day--neighboringMonth{
+    color: #929292;
+}
