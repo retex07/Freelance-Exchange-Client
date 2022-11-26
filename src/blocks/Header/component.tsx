@@ -1,16 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-import Button from '../../components/Button';
-import Modal from '../../components/Modal';
-import Switch from '../../components/Switch';
-import { useTranslation } from "react-i18next";
-
-import './styles.scss';
 import Dropdown from '../../components/Dropdown';
+import Switch from '../../components/Switch';
+import './styles.scss';
 
 export default function Header() {
-  const { t } = useTranslation("b_header");
+  const { t } = useTranslation('b_header');
+
+  const linkList = [
+    <Link key={1} to="/profile/item">
+      {t('dropdown.profile')}
+    </Link>,
+    <Link key={1} to="/myAds">
+      {t('dropdown.ads')}
+    </Link>,
+    <Link key={1} to="">
+      {t('dropdown.exit')}
+    </Link>,
+  ];
 
   return (
     <header className="header">
@@ -19,14 +28,14 @@ export default function Header() {
         <nav className="header-nav">
           <ul className="nav-list">
             <li className="nav-item">
-              <Link to={'/'} className='header-nav-link'>
-                {t("mainLink")}
+              <Link to={'/'} className="header-nav-link">
+                {t('mainLink')}
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link to={'/ads'} className='header-nav-link'>
-                {t("adsLink")}
+              <Link to={'/ads'} className="header-nav-link">
+                {t('adsLink')}
               </Link>
             </li>
           </ul>
@@ -38,29 +47,10 @@ export default function Header() {
           RU
         </div>
 
-        <Dropdown 
-          visible={
-            <img className='header-dropdown' src={require("../../static/img/anon_ava.png")}/>
-          } 
-          drop={[
-            <Link to="/profile/page">
-              {t("dropdown.profile")}
-            </Link>,
-            <Link to="/myAds">
-              {t("dropdown.ads")}
-            </Link>,
-            <Link to="">
-              {t("dropdown.exit")}
-            </Link>,
-          ]}
+        <Dropdown
+          visible={<img className="header-dropdown" src={require('../../static/img/anon_ava.png')} alt="dropdown" />}
+          drop={linkList}
         />
-        {/* <Button
-            onClick={() => {}}
-            text={t("enterButton")}
-            disabled={false}
-            color="blue"
-            size="small"
-        /> */}
       </div>
     </header>
   );
