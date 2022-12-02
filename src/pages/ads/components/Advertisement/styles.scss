@@ -6,10 +6,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // width: 100%;
+
     min-width: 860px;
     margin-bottom: 40px;
     padding: 20px 80px 25px 20px;
+    cursor: pointer;
+    gap: 40px;
+    width: 100%;
 
     color: $color__text;
     font-size: 17px;
@@ -25,8 +28,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
     margin-right: 40px;
+
+    label {
+        width: 115px;
+    }
 }
 .announ-img{
     height: 71px;

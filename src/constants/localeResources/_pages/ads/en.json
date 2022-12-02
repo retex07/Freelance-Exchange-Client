@@ -14,5 +14,15 @@
       "price": "Price",
       "button":"Publish",
       "error":"Required to fill"
-  }
+  },
+
+  "adsItem": {
+    "category": "Category:",
+    "deadline": "Deadline:",
+    "earn": "Earn:",
+    "description": "Description:",
+    "customer": "Customer:"
+  },
+
+  "alert": "The application has been sent successfully!"
 }
