@@ -21,7 +21,13 @@
     "deadline": "Deadline:",
     "earn": "Earn:",
     "description": "Description:",
-    "customer": "Customer:"
+    "customer": "Customer:",
+    "publishedDate": "Date of publication"
+  },
+
+  "button": {
+    "done": "The order is ready",
+    "cancel": "Cancel the order"
   },
 
   "alert": "The application has been sent successfully!"

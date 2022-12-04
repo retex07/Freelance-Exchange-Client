@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import Button from '../../../../components/Button';
 import Modal from '../../../../components/Modal';
+import Close from '../../../../static/icons/Close';
 import RubleIcon from '../../../../static/icons/Ruble';
 import './styles.scss';
 
@@ -33,7 +34,12 @@ export default function CreateAdsForm({ isOpen, onClose }: Props) {
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <form className="creare-ads-form" action="" onSubmit={handleSubmit(onSubmit)}>
-        <h2 className="create-ads-header">{t('adsCreate.header')}</h2>
+        <div className="create-ads-topic-info">
+          <h2 className="create-ads-header">{t('adsCreate.header')}</h2>
+          <div className="closer" onClick={onClose}>
+            <Close />
+          </div>
+        </div>
 
         <div className="creare-ads-input-block">
           <label className="creare-ads-label">{t('adsCreate.category')}</label>

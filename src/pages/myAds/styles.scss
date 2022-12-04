@@ -1,0 +1,47 @@
+@import '/src/styles/variables';
+
+.ads {
+  &--container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px 80px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    gap: 30px;
+
+    background: $color__white;
+    box-shadow: 3px 5px 5px 3px rgba(0, 0, 0, 0.13);
+    border-radius: 15px;
+  }
+
+  &--header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    h1 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 39px;
+      color: #0C54A0;
+
+      text-align: center;
+    }
+  }
+
+  &--select {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    gap: 12px;
+
+    &--button {
+      min-width: 170px;
+    }
+  }
+}
