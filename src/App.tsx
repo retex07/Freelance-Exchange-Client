@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import PageLoader from './components/PageLoader';
@@ -11,18 +11,16 @@ import ProfileItem from './pages/profile/pages/ProfileItem';
 
 function App() {
   return (
-    <Suspense fallback={<PageLoader />}>
-      <Routes>
-        <Route path="/" element={<IndexPage />} />
-        <Route path="/loader" element={<PageLoader />} />
-        <Route path="/ads" element={<AdsPage />} />
-        <Route path="/myAds" element={<MyAdsPage />} />
-        <Route path="/profile" element={<ProfilePage />}>
-          <Route path="item" element={<ProfileItem />} />
-          <Route path="edit" element={<ProfileEdit />} />
-        </Route>
-      </Routes>
-    </Suspense>
+    <Routes>
+      <Route path="/" element={<IndexPage />} />
+      <Route path="/loader" element={<PageLoader />} />
+      <Route path="/ads" element={<AdsPage />} />
+      <Route path="/myAds" element={<MyAdsPage />} />
+      <Route path="/profile" element={<ProfilePage />}>
+        <Route path="item" element={<ProfileItem />} />
+        <Route path="edit" element={<ProfileEdit />} />
+      </Route>
+    </Routes>
   );
 }
 

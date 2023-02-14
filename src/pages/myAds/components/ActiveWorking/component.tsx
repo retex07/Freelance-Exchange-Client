@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import Button from '../../../../components/Button';
 import { adsItems } from '../../../../mocks/adsItems';
-import './styles.scss';
+import '../styles.scss';
 
 export default function ActiveWorking() {
   const { t } = useTranslation('p_ads');
@@ -14,7 +14,7 @@ export default function ActiveWorking() {
         <div key={item.id} className="solution-card">
           <div className="card-topic-info">
             <img src={require('../../../../static/img/Task.png')} alt="task" className="icon" />
-            <label className="card-topic-info--text">{item.topic}</label>
+            <label className="card-topic-info__text">{item.topic}</label>
           </div>
           <div className="second-info">
             <div>

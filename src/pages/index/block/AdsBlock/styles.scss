@@ -6,10 +6,21 @@
     align-items: center;
 }
 .announ-header{
-    margin-bottom: 30px;
-
-    font-size: 32px;
+    font-weight: 600;
     color: $color__tusur;
+
+    @media screen and (min-width: 1180px) {
+        margin-bottom: 30px;
+        font-size: 45px;
+    }
+    @media screen and (min-width: 740px) and (max-width: 1180px) {
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+    @media screen and (max-width: 740px) {
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
 }
 
 .announ-see{
@@ -22,9 +33,15 @@
 
     span{
         margin-bottom: 10px;
-
+        user-select: none;
         font-weight: 400;
-        font-size: 20px;
+
+        @media screen and (min-width: 1180px) {
+            font-size: 20px;
+        }
+        @media screen and (max-width: 1180px) {
+            font-size: 18px;
+        }
         line-height: 24px;
         color: $color__tusur;
     }

@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import Button from '../../../../components/Button';
 import Modal from '../../../../components/Modal';
 import Close from '../../../../static/icons/Close';
-import RubleIcon from '../../../../static/icons/Ruble';
 import './styles.scss';
 
 type Inputs = {
@@ -72,9 +71,6 @@ export default function CreateAdsForm({ isOpen, onClose }: Props) {
             {...register('price', { required: true })}
           />
           {errors.price && <p className="creare-ads-error-description">{t('adsCreate.error')}</p>}
-          <div className="input-icon">
-            <RubleIcon />
-          </div>
         </div>
 
         <Button text={t('adsCreate.button')} size="middle" color="blue" disabled={false} />

@@ -20,7 +20,7 @@
   bottom: 0;
   left: 0;
 
-  background: rgba(146, 146, 146, 0.5);
+  background: $color__gray;
   cursor: pointer;
 }
 
@@ -32,6 +32,8 @@
 
   border-radius: 8px;
   background: $color__white;
+
+  margin: 20px;
 
   z-index: 2;
 }

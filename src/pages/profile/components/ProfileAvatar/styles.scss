@@ -1,0 +1,53 @@
+@import '../../../../styles/variables';
+
+.edit-avatar-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.edit-header {
+  margin-bottom: 28px;
+  text-align: center;
+
+  color: $color__tusur;
+}
+
+@media screen and (min-width: 1180px) {
+  .avatar1 {
+    width: 210px;
+    height: 210px;
+    margin-bottom: 10px;
+
+    border: 2px solid $color__tusur;
+    border-radius: 50%;
+  }
+  .avatar2 {
+    display: none;
+  }
+}
+@media screen and (min-width: 740px) and (max-width: 1180px) {
+  .avatar1 {
+    display: none;
+  }
+  .avatar2 {
+    width: 100%;
+    margin-bottom: 10px;
+
+    border: 2px solid $color__tusur;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .avatar1 {
+    display: none;
+  }
+  .avatar2 {
+    width: 110px;
+    margin-bottom: 10px;
+
+    border: 2px solid $color__tusur;
+    border-radius: 50%;
+  }
+}

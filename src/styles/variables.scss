@@ -1,8 +1,21 @@
 @use "sass:color";
 
-$color__white: #fff;
+$color__white: #FFFFFF;
+$color__white2: #D7D4D4;
+$color__white3: #A0A0A0;
+$color__white4: #929292;
 $color__tusur: #0C54A0;
+$color__blue: #1977DB;
 $color__green: #0BC92A;
 $color__text: #4A4A4A;
-$color__red: #bd1111;
+$color__text2: #474747;
+$color__red: #BD1111;
+$color__red2: #B32E2E;
+$color__red3: #A02828;
 $color__bg: #F0F0F0;
+
+$color__white__disabled: rgba($color__white, 0.5);
+$color__gray: rgba(146, 146, 146, 0.5);
+$color__gray2: rgba(98, 98, 98, 0.61);
+$color__black: rgba(0, 0, 0, 0.13);
+$color__black2: rgba(74, 74, 74, 0.12);

@@ -1,9 +1,8 @@
 import React from 'react';
 
 import Header from '../../blocks/Header';
-import Hero from '../../blocks/Hero';
 import AdsBlock from './block/AdsBlock';
-import './styles.scss';
+import Hero from './block/Hero';
 
 export default function IndexPage() {
   return (

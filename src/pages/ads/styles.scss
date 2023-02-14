@@ -5,9 +5,15 @@
 }
 
 .announ-page-create {
+  @media screen and (min-width: 740px) {
+    padding-top: 70px;
+    margin-bottom: 50px;
+  }
+  @media screen and (max-width: 740px) {
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 70px;
-  margin-bottom: 50px;
 }

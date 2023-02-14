@@ -52,9 +52,11 @@ export default function AdsItem({ isOpen, onClose, customer, description, earn, 
             </div>
           </div>
         </div>
-        <div>
+        <div className="description-block">
           <h3>{t('adsItem.description')}</h3>
-          <label>{description}</label>
+          <div className="description">
+            <label>{description}</label>
+          </div>
         </div>
         <div>
           <Button text={t('buttonRespond')} color="green" size="middle" onClick={() => alert(t('alert'))} />

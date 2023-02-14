@@ -12,12 +12,12 @@ export default function MyAdsPage() {
   return (
     <>
       <Header />
-      <div className="container ads--container">
-        <div className="ads--header">
+      <div className="container ads__container">
+        <div className="ads__header">
           <h1>Мои объявления</h1>
         </div>
-        <div className="ads--select">
-          <div className="ads--select--button">
+        <div className="ads__select">
+          <div className="ads__select__button">
             <Button
               fullWidth
               color={isActiveWaiting ? 'blue' : 'white'}
@@ -26,7 +26,7 @@ export default function MyAdsPage() {
               onClick={() => setIsActiveWaiting(false)}
             />
           </div>
-          <div className="ads--select--button">
+          <div className="ads__select__button">
             <Button
               fullWidth
               color={isActiveWaiting ? 'white' : 'blue'}

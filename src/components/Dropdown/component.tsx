@@ -4,7 +4,7 @@ import './styles.scss';
 interface IDropdownProps {
   visible: string | React.ReactNode;
   tabindex?: number;
-  drop: Array<string> | Array<React.ReactNode>;
+  drop: string[] | React.ReactNode[];
 }
 
 export default function DropdownComponent({ visible, tabindex, drop }: IDropdownProps) {

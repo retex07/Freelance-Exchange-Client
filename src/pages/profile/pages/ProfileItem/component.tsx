@@ -19,28 +19,27 @@ export default function ProfileItem() {
       <div className="info-block">
         <div className="info-text">
           <h1 className="profile-header">Иван</h1>
-
+          <div className="avatar-block">
+            <img src={require('../../../../static/img/profile_anon.png')} alt="avatar" className="avatar2" />
+          </div>
           <p className="profile-institution">ТУСУР ФСУ-2 ПИ</p>
-
           <h2 className="profile-unit-header">{t('page.skills')}</h2>
-
           <List
             list={['HTML', 'CSS', 'JS/TS', 'React']}
             classList="profile-skills-list"
             classItem="profile-skills-item"
           />
         </div>
-
         <div className="info-avatar">
-          <img src={require('../../../../static/img/profile_anon.png')} alt="avatar" className="avatar" />
+          <img src={require('../../../../static/img/profile_anon.png')} alt="avatar" className="avatar1" />
           <Button disabled={false} text={t('page.editButton')} color="blue" size="middle" onClick={linkHandler} />
         </div>
       </div>
 
       <h2 className="profile-unit-header">{t('page.about')}</h2>
       <p className="profile-about">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore iste officia aut itaque, nam error aliquam
-        tempora qui rem. Fugit beatae illum tempore culpa, ipsa similique? Omnis nihil tenetur molestiae.
+        Оптимизм, уверенность в себе, стрессоустойчивость, коммуникабельность, ответственность, вовлеченность,
+        порядочность, ориентированность на результат.
       </p>
       <Link to="/profile/edit" id="toEdit" />
     </div>

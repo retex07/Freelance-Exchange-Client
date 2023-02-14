@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ProfileAvatar from './ProfileAvatar';
-import ProfileForm from './ProfileForm/component';
+import ProfileAvatar from '../../components/ProfileAvatar';
+import ProfileForm from './components/ProfileForm/component';
 import './styles.scss';
 
 export default function ProfileEdit() {
