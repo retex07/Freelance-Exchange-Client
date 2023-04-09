@@ -4,7 +4,7 @@ import './styles.scss';
 interface IButtonProps {
   text: string;
   color: 'blue' | 'green' | 'white' | 'clear' | 'red';
-  size: 'middle' | 'big';
+  size: 'small' | 'middle' | 'big';
   fullWidth?: boolean;
   disabled?: boolean;
   onClick?: () => void;
