@@ -7,26 +7,49 @@
 
 .label {
   font-weight: 500;
+  font-size: 15px;
   color: var(--text-color);
 }
 
-.input {
-  padding: 10px 15px;
+.input-normal {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 4px;
 
-  background-color: transparent;
-
-  transition: all 0.3s ease-in-out;
+  border: 1px solid #CDCDCD;
+  border-radius: 10px;
+}
+.input-normal:hover {
+  border: 1px solid #0C54A0;
+  border-radius: 10px;
+}
+.input-normal:focus {
+  border: 1px solid #0C54A0;
+  outline: none;
+  border-radius: 10px;
 }
 
-.input::placeholder {
-  opacity: 0.5;
-  transition: all 0.3s ease-in-out;
+.input-error {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 4px;
+
+  border: 1px solid #B32E2E;
+  color: #B32E2E;
+
+  border-radius: 10px;
+}
+.input-error:focus {
+  border: 1px solid #fd0404;
+  color: #BD1111;
+  outline: none;
 }
 
-.input:hover::placeholder {
-  opacity: 1;
-}
-
-.input:focus::placeholder {
-  opacity: 1;
+.label-error {
+  font-size: 14px;
+  color: #BD1111;
 }
