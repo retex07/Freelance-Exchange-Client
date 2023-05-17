@@ -1,8 +1,9 @@
 {
     "mainLink": "MAIN",
+    "forum": "FORUM",
     "adsLink": "ADS",
     "navigation": "Navigation",
-    "enterButton": "ENTER",
+    "login": "Log-in",
     
     "dropdown":{
         "profile": "Profile",

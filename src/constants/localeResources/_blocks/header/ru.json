@@ -1,8 +1,9 @@
 {
   "mainLink": "ГЛАВНАЯ",
+  "forum": "ФОРУМ",
   "adsLink": "ОБЪЯВЛЕНИЯ",
   "navigation": "Навигация",
-  "enterButton": "ВОЙТИ",
+  "login": "Войти",
 
   "dropdown":{
     "profile": "Профиль",
