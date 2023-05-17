@@ -85,6 +85,9 @@ export default function Auth(props: Props) {
                 required
               />
             </div>
+            {localStorage.getItem('errorLogin') && (
+              <label className="auth__error">{localStorage.getItem('errorLogin')}</label>
+            )}
             <span className="auth__click" onClick={() => setIsContentLogin(false)}>
               <u>{t('auth.inputsBlock.registration')}</u>
             </span>
