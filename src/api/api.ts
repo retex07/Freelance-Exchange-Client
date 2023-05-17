@@ -16,6 +16,28 @@ apiInstance.interceptors.request.use(function (config) {
 });
 
 const api = {
+  forumList: async () => {
+    return apiInstance.get('forum/');
+  },
+
+  forumCreate: async (title: string, description: string) => {
+    return apiInstance.post('forum/', {
+      title,
+      description,
+    });
+  },
+
+  commentListForum: async (id: string) => {
+    return apiInstance.get(`forum/${id}/`);
+  },
+
+  commentCreateForum: async (post: string, text: string) => {
+    return apiInstance.post(`forum/comment/`, {
+      post,
+      text,
+    });
+  },
+
   categoryList: async () => {
     return apiInstance.get('board/category/');
   },

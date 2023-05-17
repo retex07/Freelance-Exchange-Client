@@ -6,6 +6,32 @@ export function useGets() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
+  function GetForumList() {
+    setIsLoading(true);
+    Api.forumList()
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.error(err);
+      })
+      .finally(() => setIsLoading(false));
+    return data;
+  }
+
+  function GetCommentsForum(id: string) {
+    setIsLoading(true);
+    Api.commentListForum(id)
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.error(err);
+      })
+      .finally(() => setIsLoading(false));
+    return data;
+  }
+
   function GetUser() {
     setIsLoading(true);
     Api.user()
@@ -44,5 +70,5 @@ export function useGets() {
     return data;
   }
 
-  return { GetAdsList, GetUser, GetCategoryList, isLoading };
+  return { GetAdsList, GetForumList, GetCommentsForum, GetUser, GetCategoryList, isLoading };
 }

@@ -4,54 +4,87 @@ import Api from './api';
 
 export function usePosts() {
   const [data, setData] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+
+  function ForumCreate(title: string, description: string) {
+    setIsLoading(true);
+    Api.forumCreate(title, description)
+      .then((res) => {
+        setData(res.data);
+        window.location.reload();
+      })
+      .catch((err) => console.error(err))
+      .finally(() => setIsLoading(false));
+
+    return data;
+  }
+
+  function CommentForumCreate(post: string, text: string) {
+    setIsLoading(true);
+    Api.commentCreateForum(post, text)
+      .then((res) => {
+        setData(res.data);
+        window.location.reload();
+      })
+      .catch((err) => console.error(err))
+      .finally(() => setIsLoading(false));
+
+    return data;
+  }
 
   function Login(nickname: string, password: string) {
+    setIsLoading(true);
     Api.login(nickname, password)
       .then((res) => {
-        console.log(res.data);
         localStorage.setItem('token', res.data.auth_token);
         setData(res.data);
         window.location.reload();
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.error(err))
+      .finally(() => setIsLoading(false));
 
     return data;
   }
 
   function Logout() {
+    setIsLoading(true);
     Api.logout()
       .then((res) => {
-        console.log(res.data);
         localStorage.clear();
         setData(res.data);
         window.location.reload();
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.error(err))
+      .finally(() => setIsLoading(false));
 
     return data;
   }
 
   function Registration(email: string, nickname: string, password: string) {
+    setIsLoading(true);
     Api.registration(nickname, email, password)
       .then((res) => {
         setData(res.data);
         window.location.reload();
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.error(err))
+      .finally(() => setIsLoading(false));
 
     return data;
   }
 
   function CreateBoard(title: string, content: string, price: string, category: string) {
+    setIsLoading(true);
     Api.createBoard(title, content, price, category)
       .then((res) => {
         setData(res.data);
         window.location.reload();
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.error(err))
+      .finally(() => setIsLoading(false));
 
     return data;
   }
 
-  return { Registration, CreateBoard, Login, Logout };
+  return { Registration, CreateBoard, CommentForumCreate, ForumCreate, Login, Logout, isLoading };
 }
