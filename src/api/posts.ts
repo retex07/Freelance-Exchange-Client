@@ -19,7 +19,7 @@ export function usePosts() {
     return data;
   }
 
-  function CommentForumCreate(post: string, text: string) {
+  function CommentForumCreate(post: number, text: string) {
     setIsLoading(true);
     Api.commentCreateForum(post, text)
       .then((res) => {
@@ -36,11 +36,12 @@ export function usePosts() {
     setIsLoading(true);
     Api.login(nickname, password)
       .then((res) => {
+        localStorage.clear();
         localStorage.setItem('token', res.data.auth_token);
         setData(res.data);
         window.location.reload();
       })
-      .catch((err) => console.error(err))
+      .catch(() => localStorage.setItem('errorLogin', 'Неверно введен логин или пароль!'))
       .finally(() => setIsLoading(false));
 
     return data;

@@ -19,6 +19,19 @@ export function useGets() {
     return data;
   }
 
+  function GetForumId(id: string) {
+    setIsLoading(true);
+    Api.forumId(id)
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.error(err);
+      })
+      .finally(() => setIsLoading(false));
+    return data;
+  }
+
   function GetCommentsForum(id: string) {
     setIsLoading(true);
     Api.commentListForum(id)
@@ -70,5 +83,5 @@ export function useGets() {
     return data;
   }
 
-  return { GetAdsList, GetForumList, GetCommentsForum, GetUser, GetCategoryList, isLoading };
+  return { GetAdsList, GetForumId, GetForumList, GetCommentsForum, GetUser, GetCategoryList, isLoading };
 }

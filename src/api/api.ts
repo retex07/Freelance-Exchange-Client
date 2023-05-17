@@ -16,6 +16,10 @@ apiInstance.interceptors.request.use(function (config) {
 });
 
 const api = {
+  forumId: async (id: string) => {
+    return apiInstance.get(`forum/${id}`);
+  },
+
   forumList: async () => {
     return apiInstance.get('forum/');
   },
@@ -31,7 +35,7 @@ const api = {
     return apiInstance.get(`forum/${id}/`);
   },
 
-  commentCreateForum: async (post: string, text: string) => {
+  commentCreateForum: async (post: number, text: string) => {
     return apiInstance.post(`forum/comment/`, {
       post,
       text,
