@@ -1,8 +1,8 @@
 {
-  "header": "ADS",
+  "header": "Ads",
   "buttonCreate": "Create Ad",
   "theme": "Theme",
-  "buttonRespond": "RESPOND",
+  "buttonRespond": "Respond",
   "more": "See more",
   "adsCreate": {
       "header":"PARAMS",
