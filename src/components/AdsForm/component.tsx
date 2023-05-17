@@ -52,7 +52,6 @@ export default function AdsForm({ isEdit, id, isOpen, onClose }: Props) {
   });
 
   function onSubmit(data: Inputs) {
-    console.log(data);
     if (isEdit && id) {
       PutBoard(data.title, data.content, data.price, nowCategory, id);
     } else {
