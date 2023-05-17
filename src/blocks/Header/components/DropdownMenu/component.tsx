@@ -4,10 +4,10 @@ import './styles.scss';
 interface IDropdownProps {
   visible: string | React.ReactNode;
   tabindex?: number;
-  drop: string[] | React.ReactNode[];
+  dropList: string[] | React.ReactNode[];
 }
 
-export default function DropdownComponent({ visible, tabindex, drop }: IDropdownProps) {
+export default function DropdownMenu({ visible, tabindex, dropList }: IDropdownProps) {
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -17,10 +17,10 @@ export default function DropdownComponent({ visible, tabindex, drop }: IDropdown
       </p>
       {open && (
         <ul className="dropdown-list">
-          {drop.map((el, index) => {
+          {dropList.map((item, index) => {
             return (
               <li className="dropdown-item" key={`dropdown_${index}`}>
-                {el}
+                {item}
               </li>
             );
           })}
