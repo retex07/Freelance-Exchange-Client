@@ -2,16 +2,26 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 
-import Dropdown from '../../components/Dropdown';
+import { usePosts } from '../../api/posts';
+import Auth from '../../components/Auth/component';
+import Button from '../../components/Button';
 import SwitchLanguage from '../../components/SwitchLanguage';
 import Close from '../../static/icons/Close';
 import Menu from '../../static/icons/Menu';
+import DropdownMenu from './components/DropdownMenu';
 import './styles.scss';
 
 export default function Header() {
   const { t } = useTranslation('b_header');
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const [isOpenModal, setIsOpenModal] = useState(false);
   const navigate = useNavigate();
+
+  const { Logout } = usePosts();
+
+  function onLogout() {
+    Logout();
+  }
 
   const linkList = [
     <Link key={0} to="/profile/item">
@@ -20,13 +30,14 @@ export default function Header() {
     <Link key={1} to="/myAds">
       {t('dropdown.ads')}
     </Link>,
-    <Link key={2} to="">
+    <Link key={2} to="" onClick={() => onLogout()}>
       {t('dropdown.exit')}
     </Link>,
   ];
 
   return (
     <header className="header">
+      {isOpenModal && <Auth isOpen={isOpenModal} onClose={() => setIsOpenModal(false)} />}
       <div className="container header-container__desktop">
         <img src={require('../../static/img/logo.png')} alt="Logo" onClick={() => navigate('/')} className="logo" />
         <nav className="header-nav">
@@ -50,10 +61,14 @@ export default function Header() {
           <label>RU</label>
         </div>
 
-        <Dropdown
-          visible={<img className="header-dropdown" src={require('../../static/img/anon_ava.png')} alt="dropdown" />}
-          drop={linkList}
-        />
+        {localStorage.getItem('token') ? (
+          <DropdownMenu
+            visible={<img className="header-dropdown" src={require('../../static/img/anon_ava.png')} alt="dropdown" />}
+            dropList={linkList}
+          />
+        ) : (
+          <Button text={t('login')} color="blue" size="small" onClick={() => setIsOpenModal(true)} />
+        )}
       </div>
 
       <div className="header-container__mobile">
@@ -61,10 +76,14 @@ export default function Header() {
           <Menu />
         </div>
         <img src={require('../../static/img/logo.png')} alt="Logo" onClick={() => navigate('/')} />
-        <Dropdown
-          visible={<img className="header-dropdown" src={require('../../static/img/anon_ava.png')} alt="dropdown" />}
-          drop={linkList}
-        />
+        {localStorage.getItem('token') ? (
+          <DropdownMenu
+            dropList={linkList}
+            visible={<img className="header-dropdown" src={require('../../static/img/anon_ava.png')} alt="dropdown" />}
+          />
+        ) : (
+          <Button text={t('login')} color="blue" size="small" onClick={() => setIsOpenModal(true)} />
+        )}
         {isOpenMenu && (
           <div className="sidebar">
             <div className="sidebar__close" onClick={() => setIsOpenMenu(false)}>

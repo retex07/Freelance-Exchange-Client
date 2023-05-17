@@ -1,0 +1,35 @@
+{
+  "auth": {
+    "header": "Log in to the system",
+    "inputsBlock": {
+      "login": "Login",
+      "pressLogin": "Enter your login",
+      "pass": "Password",
+      "pressPass": "Enter the password",
+      "signIn": "Log-in",
+      "registration": "Register"
+    }
+  },
+  "registration": {
+    "header": "Registration",
+    "inputsBlock": {
+      "login": "Login",
+      "pressLogin": "Enter your login",
+      "email": "Mail",
+      "pressEmail": "Enter the mail",
+      "pass": "Password",
+      "pressPass": "Enter the password",
+      "repeatPass": "Repeat the password",
+      "pressRepeatPass": "Re-enter the password",
+      "registration": "Register",
+      "signIn": "Log-in"
+    }
+  },
+  "rules": {
+    "one": "When registering and logging in, you agree to",
+    "two": "terms of use of the service",
+    "three": "and",
+    "four": "data processing policy"
+  },
+  "errorPass": "Passwords must match!"
+}
