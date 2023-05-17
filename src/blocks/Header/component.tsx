@@ -48,6 +48,11 @@ export default function Header() {
               </Link>
             </li>
             <li className="nav-item">
+              <Link to={'/forum'} className="header-nav-link">
+                {t('forum')}
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link to={'/ads'} className="header-nav-link">
                 {t('adsLink')}
               </Link>
@@ -99,6 +104,11 @@ export default function Header() {
                   <li className="sidebar__nav-item">
                     <Link to={'/'} className="header-nav-link">
                       {t('mainLink')}
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to={'/forum'} className="header-nav-link">
+                      {t('forum')}
                     </Link>
                   </li>
                   <li className="sidebar__nav-item">

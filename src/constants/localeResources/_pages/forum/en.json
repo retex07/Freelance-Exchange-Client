@@ -1,0 +1,20 @@
+{
+  "header": "Forum",
+  "buttonCreate": "Create a discussion",
+  "theme": "Topic",
+  "forumCreate": {
+    "header":"Parameters",
+    "theme": "Topic of discussion",
+    "description": "Description of the discussion",
+    "button":"To publish",
+    "error":"Required to fill in"
+  },
+  "forumId": {
+    "backToList": "To the list of discussions",
+    "author": "Author",
+    "created": "Created",
+    "description": "Description",
+    "pressComment": "Enter a comment",
+    "send": "Send"
+  }
+}

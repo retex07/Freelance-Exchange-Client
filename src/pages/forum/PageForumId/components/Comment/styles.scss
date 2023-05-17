@@ -1,0 +1,41 @@
+.comment-container {
+  display: flex;
+  flex-direction: row;
+
+  gap: 12px;
+
+  align-items: center;
+}
+
+.avatar {
+  height: 36px;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.headInfoMsg {
+  display: flex;
+  @media screen and (min-width: 448px) {
+    flex-direction: row;
+  }
+  @media screen and (max-width: 448px) {
+    flex-direction: column;
+  }
+  gap: 8px;
+
+  label {
+    color: #3D3D3D;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+.text-comment {
+  color: #3D3D3D;
+  font-weight: 400;
+  font-size: 16px;
+}
