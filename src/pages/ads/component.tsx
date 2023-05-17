@@ -1,17 +1,40 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useGets } from '../../api/gets';
+import { AdsList, User } from '../../api/types';
 import Header from '../../blocks/Header';
+import AdsForm from '../../components/AdsForm';
 import Button from '../../components/Button';
-import { adsItems } from '../../mocks/adsItems';
+import PageLoader from '../../components/PageLoader';
 import Advertisement from './components/Advertisement';
-import CreateAdsForm from './components/CreateAdsForm';
 import './styles.scss';
 
 export default function AdsPage() {
+  const [dataAds, setDataAds] = useState<AdsList[]>();
   const { t } = useTranslation('p_ads');
 
+  const [dataUser, setDataUser] = useState<User | undefined>(undefined);
   const [isOpenCreateAds, setIsOpenCreateAds] = useState(false);
+
+  const { GetAdsList } = useGets();
+  const { GetUser, isLoading } = useGets();
+
+  useEffect(() => {
+    if (!dataAds) {
+      setDataAds(GetAdsList());
+    }
+  }, [GetAdsList, dataAds]);
+
+  function getUser() {
+    if (!isLoading) {
+      setDataUser(GetUser());
+    }
+  }
+  if (isLoading || (localStorage.getItem('token') && !dataUser)) {
+    getUser();
+    return <PageLoader />;
+  }
 
   return (
     <>
@@ -30,20 +53,21 @@ export default function AdsPage() {
           />
         </div>
 
-        {adsItems.map((item) => (
+        {dataAds?.map((item) => (
           <Advertisement
             key={item.id}
-            customer={item.customer}
-            topic={item.topic}
-            description={item.description}
-            publishedDate={item.publishedDate}
-            category={item.category}
-            deadline={item.deadline}
-            earn={item.earn}
+            customer={item.author.username}
+            topic={item.title}
+            description={item.content}
+            publishedDate={item.published}
+            category={item.category.category}
+            earn={item.price}
+            id={item.id}
+            user={dataUser}
           />
         ))}
 
-        <CreateAdsForm isOpen={isOpenCreateAds} onClose={() => setIsOpenCreateAds(false)} />
+        <AdsForm isOpen={isOpenCreateAds} onClose={() => setIsOpenCreateAds(false)} />
       </div>
     </>
   );

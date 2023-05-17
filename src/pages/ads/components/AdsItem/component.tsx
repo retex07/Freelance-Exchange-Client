@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { User } from '../../../../api/types';
 import Button from '../../../../components/Button';
 import Modal from '../../../../components/Modal';
 import Close from '../../../../static/icons/Close';
@@ -13,11 +14,22 @@ interface Props {
   topic: string;
   description: string;
   category: string;
-  deadline: string;
-  earn: string;
+  deadline?: string;
+  earn: number;
+  user?: User;
 }
 
-export default function AdsItem({ isOpen, onClose, customer, description, earn, topic, deadline, category }: Props) {
+export default function AdsItemModal({
+  user,
+  isOpen,
+  onClose,
+  customer,
+  description,
+  earn,
+  topic,
+  deadline,
+  category,
+}: Props) {
   const { t } = useTranslation('p_ads');
 
   return (
@@ -58,9 +70,22 @@ export default function AdsItem({ isOpen, onClose, customer, description, earn, 
             <label>{description}</label>
           </div>
         </div>
-        <div>
-          <Button text={t('buttonRespond')} color="green" size="middle" onClick={() => alert(t('alert'))} />
-        </div>
+        {customer != user?.username && (
+          <div>
+            <Button
+              text={t('buttonRespond')}
+              color="green"
+              size="middle"
+              onClick={() => {
+                if (!user) {
+                  alert(t('authError'));
+                } else {
+                  alert(t('alert'));
+                }
+              }}
+            />
+          </div>
+        )}
       </div>
     </Modal>
   );

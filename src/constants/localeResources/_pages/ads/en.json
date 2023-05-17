@@ -1,11 +1,9 @@
 {
   "header": "ADS",
   "buttonCreate": "Create Ad",
-
   "theme": "Theme",
   "buttonRespond": "RESPOND",
   "more": "See more",
-
   "adsCreate": {
       "header":"PARAMS",
       "category": "Category",
@@ -15,7 +13,6 @@
       "button":"Publish",
       "error":"Required to fill"
   },
-
   "adsItem": {
     "category": "Category:",
     "deadline": "Deadline:",
@@ -24,11 +21,12 @@
     "customer": "Customer:",
     "publishedDate": "Date of publication"
   },
-
   "button": {
     "done": "The order is ready",
     "cancel": "Cancel the order"
   },
-
-  "alert": "The application has been sent successfully!"
+  "alert": "The application has been sent successfully!",
+  "authError": "Authorization must be performed!",
+  "delete": "Delete",
+  "put": "Edit"
 }

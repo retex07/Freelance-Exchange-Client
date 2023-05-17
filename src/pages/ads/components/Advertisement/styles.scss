@@ -1,136 +1,177 @@
 @import "../../../../styles/variables";
 
+.label-edit {
+  font-size: 18px;
+  color: $color__blue;
+  cursor: pointer;
+}
+.label-delete {
+  font-size: 18px;
+  color: $color__red2;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 1180px) {
-    .announ-component{
-        position: relative;
+  .announ-component {
+    display: flex;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    flex-direction: column;
+    max-width: 860px;
+    margin-bottom: 40px;
+    padding: 20px 25px;
+    gap: 4px;
+    width: 100%;
 
-        min-width: 860px;
-        margin-bottom: 40px;
-        padding: 20px 80px 25px 20px;
-        cursor: pointer;
-        gap: 40px;
-        width: 100%;
+    color: $color__text;
+    font-size: 17px;
 
-        color: $color__text;
-        font-size: 17px;
+    background-color: $color__white;
+    border-radius: 15px;
+    box-shadow: 3px 5px 5px 3px rgba(0, 0, 0, 0.13);
+  }
+  .announ-container-info {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .announ-info {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+  }
+  .announ-img-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 
-        background-color: $color__white;
-        border-radius: 15px;
-        box-shadow: 3px 5px 5px 3px rgba(0, 0, 0, 0.13);
-    }
-    .announ-info{
-        display: flex;
-    }
-    .announ-img-block{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    margin-right: 40px;
 
-        margin-right: 40px;
+    label {
+      width: 115px;
+    }
+  }
+  .announ-img {
+    height: 71px;
+    width: 71px;
+    margin-bottom: 6px;
+  }
+  .announ-text-block {
+    padding-top: 8px;
+  }
+  .announ-theme-header {
+    margin-bottom: 17px;
+  }
+  .announ-description {
+    max-width: 425px;
+    height: 57px;
+    background: linear-gradient(180deg, $color__text 35%, rgba(74, 74, 74, 0.12) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+  }
+  .announ-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        label {
-            width: 115px;
-        }
-    }
-    .announ-img{
-        height: 71px;
-        width: 71px;
-        margin-bottom: 6px;
-    }
-    .announ-text-block{
-        padding-top: 8px;
-    }
-    .announ-theme-header{
-        margin-bottom: 17px;
-    }
-    .announ-description{
-        max-width: 425px;
-        height: 57px;
-        background: linear-gradient(180deg, $color__text 35%, rgba(74, 74, 74, 0.12) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        overflow: hidden;
-    }
-    .announ-date{
-        position: absolute;
-        right: 18px;
-        bottom: 10px;
+    font-size: 16px;
+    color: $color__white3;
+  }
+  .labels-task {
+    display: flex;
 
-        font-size: 15px;
-        color: $color__white3;
-    }
+    padding: 0 10px;
+    gap: 16px;
+  }
+  .published {
+    margin-right: 0;
+    margin-left: auto;
+  }
 }
 
 @media screen and (max-width: 1180px) {
-    .announ-component{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  .announ-container-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .announ-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        margin-bottom: 40px;
-        padding: 20px 10px;
-        cursor: pointer;
-        gap: 40px;
-        width: 100%;
+    margin-bottom: 40px;
+    padding: 20px 10px;
+    cursor: pointer;
+    gap: 10px;
+    width: 100%;
 
-        color: $color__text;
-        font-size: 17px;
+    color: $color__text;
+    font-size: 17px;
 
-        background-color: $color__white;
-        border-radius: 15px;
-        box-shadow: 3px 5px 5px 3px $color__black;
+    background-color: $color__white;
+    border-radius: 15px;
+    box-shadow: 3px 5px 5px 3px $color__black;
+  }
+
+  .announ-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .announ-img-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    margin-right: 40px;
+
+    label {
+      width: 115px;
     }
+  }
 
-    .announ-info{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
+  .announ-img {
+    height: 71px;
+    width: 71px;
+    margin-bottom: 6px;
+  }
 
-    .announ-img-block{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+  .announ-text-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
 
-        width: 100%;
-        margin-right: 40px;
+  .announ-theme-header {
+    margin-bottom: 17px;
+  }
 
-        label {
-            width: 115px;
-        }
-    }
+  .announ-description {
+    max-width: 425px;
+    background: linear-gradient(180deg, $color__text 35%, $color__black2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+  }
+  .announ-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: $color__white3;
+  }
+  .labels-task {
+    display: flex;
 
-    .announ-img{
-        height: 71px;
-        width: 71px;
-        margin-bottom: 6px;
-    }
-
-    .announ-text-block{
-        text-align: center;
-    }
-
-    .announ-theme-header{
-        margin-bottom: 17px;
-    }
-
-    .announ-description{
-        max-width: 425px;
-        height: 57px;
-        background: linear-gradient(180deg, $color__text 35%, $color__black2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        overflow: hidden;
-    }
-
-    .announ-date{
-        font-size: 15px;
-        color: $color__white3;
-    }
+    gap: 16px;
+  }
 }
