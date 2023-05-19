@@ -17,10 +17,10 @@ export default function Comment({ user, text, created_at }: Props) {
           <label>{user}</label>
           <div>
             <label>
-              ({new Date(created_at).getDate()}.{new Date(created_at).getMonth()}.{new Date(created_at).getFullYear()}
+              ({new Date(created_at).getDate()}.{new Date(created_at).getMonth()}.{new Date(created_at).getFullYear()})
             </label>
             <label>
-              {new Date(created_at).getHours()}:{new Date(created_at).getMinutes()})
+              ({new Date(created_at).getHours()}:{new Date(created_at).getMinutes()})
             </label>
           </div>
         </div>

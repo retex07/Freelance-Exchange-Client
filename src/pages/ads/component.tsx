@@ -48,7 +48,11 @@ export default function AdsPage() {
             size="middle"
             color="blue"
             onClick={() => {
-              setIsOpenCreateAds(true);
+              if (!dataUser) {
+                alert(t('authError'));
+              } else {
+                setIsOpenCreateAds(true);
+              }
             }}
           />
         </div>
@@ -67,7 +71,7 @@ export default function AdsPage() {
           />
         ))}
 
-        <AdsForm isOpen={isOpenCreateAds} onClose={() => setIsOpenCreateAds(false)} />
+        {dataUser && <AdsForm isOpen={isOpenCreateAds} onClose={() => setIsOpenCreateAds(false)} />}
       </div>
     </>
   );

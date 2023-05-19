@@ -38,9 +38,7 @@ export default function AdsForm({ isEdit, id, isOpen, onClose }: Props) {
   const { GetCategoryList, isLoading } = useGets();
 
   useEffect(() => {
-    if (!dataCategory) {
-      setDataCategory(GetCategoryList());
-    }
+    setDataCategory(GetCategoryList());
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const {

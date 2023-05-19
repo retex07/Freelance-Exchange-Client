@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.scss';
 
 interface IDropdownProps {
@@ -8,14 +8,14 @@ interface IDropdownProps {
 }
 
 export default function DropdownMenu({ visible, tabindex, dropList }: IDropdownProps) {
-  const [open, setOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="dropdown">
-      <p className="dropdown-description" onClick={() => setOpen(!open)} tabIndex={tabindex}>
+      <p className="dropdown-description" onClick={() => setIsOpen(!isOpen)} tabIndex={tabindex}>
         {visible}
       </p>
-      {open && (
+      {isOpen && (
         <ul className="dropdown-list">
           {dropList.map((item, index) => {
             return (
