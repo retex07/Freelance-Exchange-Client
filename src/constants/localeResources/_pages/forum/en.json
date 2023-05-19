@@ -16,5 +16,6 @@
     "description": "Description",
     "pressComment": "Enter a comment",
     "send": "Send"
-  }
+  },
+  "authError": "Authorization must be performed!"
 }
